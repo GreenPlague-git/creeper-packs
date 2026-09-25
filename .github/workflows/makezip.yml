@@ -3,7 +3,7 @@ name: Zip Resource Pack
 on:
   push:
     branches:
-      - autozip
+      - main
 
 jobs:
   build:
