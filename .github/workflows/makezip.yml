@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - beta
 
 jobs:
   build:
@@ -16,12 +17,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create Texturepack Zip
-        run: cd CreeperTweaks && zip -r ../Completed/CreeperTweaks.zip .
+        run: zip -r CreeperTweaks.zip CreeperTweaks/
 
-      - name: Update GitHub Release
+      - name: Update Main Release
+        if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          files: Completed/CreeperTweaks.zip
+          name: "Stable Release (Main)"
+          files: CreeperTweaks.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Beta Release
+        if: github.ref == 'refs/heads/beta'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: beta-latest
+          name: "Beta Testing Release"
+          prerelease: true
+          files: CreeperTweaks.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
