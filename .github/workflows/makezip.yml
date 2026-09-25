@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create Texturepack Zip
-        run: zip -r CreeperTweaks.zip CreeperTweaks/
+        run: cd CreeperTweaks && zip -r ../CreeperTweaks.zip .
 
       - name: Update Main Release
         if: github.ref == 'refs/heads/main'
