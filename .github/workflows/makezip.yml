@@ -1,0 +1,24 @@
+name: Zip Resource Pack
+
+on:
+  push:
+    branches:
+      - autozip
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Texturepack Zip
+        run: cd CreeperTweaks && zip -r ../Completed/CreeperTweaks.zip .
+
+      - name: Update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          files: Completed/CreeperTweaks.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
