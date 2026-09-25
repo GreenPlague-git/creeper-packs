@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Viper Pickaxe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/pickaxe/viper"
+        }
+      },
+      {
+	"when": "Venom Pickaxe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/pickaxe/venom"
+        }
+      },
+      {
+	"when": "Aqua Pickaxe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/pickaxe/aqua"
+        }
+      },
+      {
+	"when": "Violet Pickaxe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/pickaxe/violet"
+        }
+      },
+      {
+	"when": "Magma Pickaxe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/pickaxe/magma"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_pickaxe"
+    }
+  }
+}

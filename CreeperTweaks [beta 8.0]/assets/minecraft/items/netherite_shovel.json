@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Viper Shovel",
+        "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/shovel/viper"
+        }
+      },
+      {
+	"when": "Venom Shovel",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/shovel/venom"
+        }
+      },
+      {
+	"when": "Aqua Shovel",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/shovel/aqua"
+        }
+      },
+      {
+	"when": "Violet Shovel",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/shovel/violet"
+        }
+      },
+      {
+	"when": "Magma Shovel",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/shovel/magma"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_shovel"
+    }
+  }
+}

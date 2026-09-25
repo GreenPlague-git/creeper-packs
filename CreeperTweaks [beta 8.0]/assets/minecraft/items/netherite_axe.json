@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Viper Axe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/axe/viper"
+        }
+      },
+      {
+	      "when": "Venom Axe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/axe/venom"
+        }
+      },
+      {
+	      "when": "Aqua Axe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/axe/aqua"
+        }
+      },
+      {
+	      "when": "Violet Axe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/axe/violet"
+        }
+      },
+      {
+	      "when": "Magma Axe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/axe/magma"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_axe"
+    }
+  }
+}

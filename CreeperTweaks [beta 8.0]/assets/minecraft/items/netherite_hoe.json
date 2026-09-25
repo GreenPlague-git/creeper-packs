@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Viper Hoe",
+        "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/hoe/viper"
+        }
+      },
+      {
+	"when": "Venom Hoe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/hoe/venom"
+        }
+      },
+      {
+	"when": "Aqua Hoe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/hoe/aqua"
+        }
+      },
+      {
+	"when": "Violet Hoe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/hoe/violet"
+        }
+      },
+      {
+	"when": "Magma Hoe",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/hoe/magma"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_hoe"
+    }
+  }
+}

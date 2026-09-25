@@ -1,0 +1,8 @@
+Creeper Tweaks
+Version: 1.21.10
+Packs:
+	old_copper_lantern_torch
+	VanillaTweaks_accurate_shield_textures
+	Torrezx-Demon_fire tools
+	green_plague armour_trim
+	green_plague tools (Torrezx recolored)

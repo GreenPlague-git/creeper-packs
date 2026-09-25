@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Viper Sword",
+        "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/sword/viper"
+        }
+      },
+      {
+	"when": "Venom Sword",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/sword/venom"
+        }
+      },
+      {
+	"when": "Aqua Sword",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/sword/aqua"
+        }
+      },
+      {
+	"when": "Violet Sword",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/sword/violet"
+        }
+      },
+      {
+	"when": "Magma Sword",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/sword/magma"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_sword"
+    }
+  }
+}
