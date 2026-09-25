@@ -15,27 +15,90 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Create Texturepack Zip
         run: cd CreeperTweaks && zip -r ../CreeperTweaks.zip .
 
+      #MAIN latest
       - name: Update Main Release
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: "Stable Release (Main)"
+          name: "Stable Release (latest)"
           files: CreeperTweaks.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      #BETA latest
+      - name: Rename Zip for Beta Release
+        if: github.ref == 'refs/heads/beta'
+        run: cp CreeperTweaks.zip CreeperTweaks-beta.zip
 
       - name: Update Beta Release
         if: github.ref == 'refs/heads/beta'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: beta-latest
-          name: "Beta Testing Release"
+          name: "Beta Testing Release (beta-latest)"
           prerelease: true
+          files: CreeperTweaks.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+      #MAIN version
+      - name: Calculate Semantic Version (Main)
+        if: github.ref == 'refs/heads/main'
+        id: tag_main
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: patch
+
+      - name: Rename Zip for Main Version
+        if: github.ref == 'refs/heads/main'
+        run: cp CreeperTweaks.zip CreeperTweaks-${{ steps.tag_main.outputs.new_tag }}.zip
+
+      - name: Create Main Version Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag_main.outputs.new_tag }}
+          name: "Stable Release ${{ steps.tag_main.outputs.new_tag }}"
+          body: |
+            ### Changelog
+            ${{ steps.tag_main.outputs.changelog }}
+          files: CreeperTweaks.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      #BETA version
+      - name: Calculate Semantic Version (Beta)
+        if: github.ref == 'refs/heads/beta'
+        id: tag_beta
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: patch
+          tag_prefix: beta
+
+      - name: Rename Zip for Beta Version
+        if: github.ref == 'refs/heads/beta'
+        run: cp CreeperTweaks.zip CreeperTweaks-${{ steps.tag_beta.outputs.new_tag }}.zip
+
+      - name: Create Beta Version Release
+        if: github.ref == 'refs/heads/beta'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag_beta.outputs.new_tag }}
+          name: "Beta Testing Release ${{ steps.tag_beta.outputs.new_tag }}"
+          prerelease: true
+          body: |
+            ### Changelog
+            ${{ steps.tag_beta.outputs.changelog }}
           files: CreeperTweaks.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
