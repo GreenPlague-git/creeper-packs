@@ -66,7 +66,7 @@ jobs:
           custom_release_rules: |
             update:major:Update,
             wip:patch:Small Changes,
-            beta:beta:Beta Fixes
+            beta:prerelease:Beta Fixes
             
 
       - name: Rename Zip for Main Version
@@ -96,9 +96,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_prerelease_bump: prerelease
           custom_release_rules: |
-            update:major:Update,
-            wip:patch:Small Changes,
-            beta:beta:Beta Fixes
+            beta:prerelease:Beta Fixes,
+            update:premajor:Update,
+            wip:prepatch:Small Changes
+            
 
       - name: Rename Zip for Beta Version
         if: github.ref == 'refs/heads/beta'
