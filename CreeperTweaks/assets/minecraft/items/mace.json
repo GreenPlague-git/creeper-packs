@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Viper Mace",
+        "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/mace/viper"
+        }
+      },
+      {
+	"when": "Venom Mace",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/mace/venom"
+        }
+      },
+      {
+	"when": "Aqua Mace",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/mace/aqua"
+        }
+      },
+      {
+	"when": "Violet Mace",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/mace/violet"
+        }
+      },
+      {
+	"when": "Magma Mace",
+	"model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/mace/magma"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/mace"
+    }
+  }
+}
