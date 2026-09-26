@@ -102,7 +102,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag_beta.outputs.new_tag }}
-          name: "Beta Testing Release ${{ steps.tag_beta.outputs.new_tag }}"
+          name: "Beta Release ${{ steps.tag_beta.outputs.new_tag }}"
           prerelease: true
           body: |
             ### Changelog
