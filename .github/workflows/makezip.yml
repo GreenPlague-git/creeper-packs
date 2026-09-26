@@ -64,7 +64,7 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          default_bump: patch
+          default_bump: none
 
       - name: Rename Zip for Main Version
         if: github.ref == 'refs/heads/main'
@@ -91,9 +91,7 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          default_bump: patch
-          tag_prefix: beta
-          append_to_pre_release_tag: ""
+          default_bump: prerelease
 
       - name: Rename Zip for Beta Version
         if: github.ref == 'refs/heads/beta'
