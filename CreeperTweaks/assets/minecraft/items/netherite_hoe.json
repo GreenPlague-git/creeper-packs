@@ -12,31 +12,38 @@
         }
       },
       {
-	"when": "Venom Hoe",
-	"model": {
+	      "when": "Venom Hoe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/hoe/venom"
         }
       },
       {
-	"when": "Aqua Hoe",
-	"model": {
+	      "when": "Aqua Hoe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/hoe/aqua"
         }
       },
       {
-	"when": "Violet Hoe",
-	"model": {
+	      "when": "Violet Hoe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/hoe/violet"
         }
       },
       {
-	"when": "Magma Hoe",
-	"model": {
+	      "when": "Magma Hoe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/hoe/magma"
+        }
+      },
+      {
+	      "when": "Soul Hoe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/hoe/soul"
         }
       }
     ],

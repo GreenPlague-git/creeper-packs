@@ -12,31 +12,38 @@
         }
       },
       {
-	"when": "Venom Sword",
-	"model": {
+	      "when": "Venom Sword",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/sword/venom"
         }
       },
       {
-	"when": "Aqua Sword",
-	"model": {
+	      "when": "Aqua Sword",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/sword/aqua"
         }
       },
       {
-	"when": "Violet Sword",
-	"model": {
+	      "when": "Violet Sword",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/sword/violet"
         }
       },
       {
-	"when": "Magma Sword",
-	"model": {
+	      "when": "Magma Sword",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/sword/magma"
+        }
+      },
+      {
+	      "when": "Soul Sword",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/sword/soul"
         }
       }
     ],

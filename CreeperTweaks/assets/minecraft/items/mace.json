@@ -12,31 +12,38 @@
         }
       },
       {
-	"when": "Venom Mace",
-	"model": {
+	      "when": "Venom Mace",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/mace/venom"
         }
       },
       {
-	"when": "Aqua Mace",
-	"model": {
+	      "when": "Aqua Mace",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/mace/aqua"
         }
       },
       {
-	"when": "Violet Mace",
-	"model": {
+	      "when": "Violet Mace",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/mace/violet"
         }
       },
       {
-	"when": "Magma Mace",
-	"model": {
+	      "when": "Magma Mace",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/mace/magma"
+        }
+      },
+      {
+	      "when": "Soul Mace",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/mace/soul"
         }
       }
     ],

@@ -12,31 +12,38 @@
         }
       },
       {
-	"when": "Venom Pickaxe",
-	"model": {
+	      "when": "Venom Pickaxe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/pickaxe/venom"
         }
       },
       {
-	"when": "Aqua Pickaxe",
-	"model": {
+	      "when": "Aqua Pickaxe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/pickaxe/aqua"
         }
       },
       {
-	"when": "Violet Pickaxe",
-	"model": {
+	      "when": "Violet Pickaxe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/pickaxe/violet"
         }
       },
       {
-	"when": "Magma Pickaxe",
-	"model": {
+	      "when": "Magma Pickaxe",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/pickaxe/magma"
+        }
+      },
+      {
+	      "when": "Soul Pickaxe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/pickaxe/soul"
         }
       }
     ],

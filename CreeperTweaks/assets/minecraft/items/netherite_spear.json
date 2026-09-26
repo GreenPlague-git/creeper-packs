@@ -42,6 +42,13 @@
                 "type": "minecraft:model",
                 "model": "green_plague:item/spear/magma"
               }
+            },
+            {
+      	      "when": "Soul Spear",
+      	      "model": {
+                "type": "minecraft:model",
+                "model": "green_plague:item/spear/soul"
+              }
             }
           ],
           "fallback": {
@@ -95,6 +102,13 @@
   	      "model": {
             "type": "minecraft:model",
             "model": "green_plague:item/spear_in_hand/magma"
+          }
+        },
+        {
+  	      "when": "Soul Spear",
+  	      "model": {
+            "type": "minecraft:model",
+            "model": "green_plague:item/spear_in_hand/soul"
           }
         }
       ],

@@ -38,6 +38,13 @@
           "type": "minecraft:model",
           "model": "green_plague:item/axe/magma"
         }
+      },
+      {
+	      "when": "Soul Axe",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/axe/soul"
+        }
       }
     ],
     "fallback": {

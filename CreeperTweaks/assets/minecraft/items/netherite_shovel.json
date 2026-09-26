@@ -12,31 +12,38 @@
         }
       },
       {
-	"when": "Venom Shovel",
-	"model": {
+	      "when": "Venom Shovel",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/shovel/venom"
         }
       },
       {
-	"when": "Aqua Shovel",
-	"model": {
+	      "when": "Aqua Shovel",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/shovel/aqua"
         }
       },
       {
-	"when": "Violet Shovel",
-	"model": {
+	      "when": "Violet Shovel",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/shovel/violet"
         }
       },
       {
-	"when": "Magma Shovel",
-	"model": {
+	      "when": "Magma Shovel",
+	      "model": {
           "type": "minecraft:model",
           "model": "green_plague:item/shovel/magma"
+        }
+      },
+      {
+	      "when": "Soul Shovel",
+	      "model": {
+          "type": "minecraft:model",
+          "model": "green_plague:item/shovel/soul"
         }
       }
     ],

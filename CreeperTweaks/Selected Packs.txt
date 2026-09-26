@@ -4,5 +4,7 @@ Packs:
 	old_copper_lantern_torch
 	VanillaTweaks_accurate_shield_textures
 	Torrezx-Demon_fire tools
+	Torrezx-Demon_soul_fire tools
 	green_plague armour_trim
+	green_plage mace & spear
 	green_plague tools (Torrezx recolored)
