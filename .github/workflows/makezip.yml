@@ -92,6 +92,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: prerelease
+          custom_release_rules: |
+            beta:patch:Beta Fixes,
+            wip:patch:Beta Fixes,
 
       - name: Rename Zip for Beta Version
         if: github.ref == 'refs/heads/beta'
