@@ -65,6 +65,13 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: none
+          custom_release_rules: |
+            update:major:Update,
+            feat:minor:New Addititions,
+            wip:patch:Small Changes,
+            fix:prerelease:Beta Fixes,
+            beta:prerelease:Beta Fixes,
+            
 
       - name: Rename Zip for Main Version
         if: github.ref == 'refs/heads/main'
@@ -93,8 +100,11 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: prerelease
           custom_release_rules: |
+            update:major:Update,
+            feat:minor:New Addititions,
+            wip:patch:Small Changes,
+            fix:prerelease:Beta Fixes,
             beta:prerelease:Beta Fixes,
-            wip:prerelease:Beta Fixes,
 
       - name: Rename Zip for Beta Version
         if: github.ref == 'refs/heads/beta'
