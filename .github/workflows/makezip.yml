@@ -67,9 +67,7 @@ jobs:
           default_bump: none
           custom_release_rules: |
             update:major:Update,
-            feat:minor:New Addititions,
             wip:patch:Small Changes,
-            fix:prerelease:Beta Fixes,
             beta:prerelease:Beta Fixes
             
 
@@ -101,9 +99,7 @@ jobs:
           default_bump: prerelease
           custom_release_rules: |
             update:major:Update,
-            feat:minor:New Addititions,
             wip:patch:Small Changes,
-            fix:prerelease:Beta Fixes,
             beta:prerelease:Beta Fixes
 
       - name: Rename Zip for Beta Version
