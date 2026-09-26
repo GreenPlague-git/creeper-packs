@@ -28,10 +28,10 @@ jobs:
         with:
           tag_name: latest
           target_commitish: main
-          name: "Stable Release (latest)"
+          name: "Permalink (latest)"
           body: "Always the latest working version of the resource pack."
           overwrite: true
-          make_latest: true
+          make_latest: false
           files: CreeperTweaks.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,10 +47,10 @@ jobs:
         with:
           tag_name: beta-latest
           target_commitish: beta
-          name: "Beta Testing Release (beta-latest)"
+          name: "Beta Permalink (beta-latest)"
           body: "Always the latest testing version of the resource pack."
           overwrite: true
-          make_latest: true
+          make_latest: false
           prerelease: true
           files: CreeperTweaks-beta.zip
         env:
@@ -79,7 +79,7 @@ jobs:
           body: |
             ### Changelog
             ${{ steps.tag_main.outputs.changelog }}
-          make_latest: false
+          make_latest: true
           files: CreeperTweaks-${{ steps.tag_main.outputs.new_tag }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -108,7 +108,7 @@ jobs:
           body: |
             ### Changelog
             ${{ steps.tag_beta.outputs.changelog }}
-          make_latest: false
+          make_latest: true
           files: CreeperTweaks-${{ steps.tag_beta.outputs.new_tag }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
