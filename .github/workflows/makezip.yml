@@ -86,36 +86,3 @@ jobs:
           files: CreeperTweaks-${{ steps.tag_main.outputs.new_tag }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      #BETA version
-      - name: Calculate Semantic Version (Beta)
-        if: github.ref == 'refs/heads/beta'
-        id: tag_beta
-        uses: mathieudutour/github-tag-action@v6.2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          default_prerelease_bump: prerelease
-          custom_release_rules: |
-            beta:prerelease:Beta Fixes,
-            update:premajor:Update,
-            wip:prepatch:Small Changes
-            
-
-      - name: Rename Zip for Beta Version
-        if: github.ref == 'refs/heads/beta'
-        run: cp CreeperTweaks.zip CreeperTweaks-${{ steps.tag_beta.outputs.new_tag }}.zip
-
-      - name: Create Beta Version Release
-        if: github.ref == 'refs/heads/beta'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.tag_beta.outputs.new_tag }}
-          name: "Beta Release ${{ steps.tag_beta.outputs.new_tag }}"
-          prerelease: true
-          body: |
-            ### Changelog
-            ${{ steps.tag_beta.outputs.changelog }}
-          make_latest: true
-          files: CreeperTweaks-${{ steps.tag_beta.outputs.new_tag }}.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
