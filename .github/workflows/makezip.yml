@@ -70,7 +70,7 @@ jobs:
             feat:minor:New Addititions,
             wip:patch:Small Changes,
             fix:prerelease:Beta Fixes,
-            beta:prerelease:Beta Fixes,
+            beta:prerelease:Beta Fixes
             
 
       - name: Rename Zip for Main Version
@@ -104,7 +104,7 @@ jobs:
             feat:minor:New Addititions,
             wip:patch:Small Changes,
             fix:prerelease:Beta Fixes,
-            beta:prerelease:Beta Fixes,
+            beta:prerelease:Beta Fixes
 
       - name: Rename Zip for Beta Version
         if: github.ref == 'refs/heads/beta'
