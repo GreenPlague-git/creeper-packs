@@ -30,7 +30,6 @@ jobs:
           target_commitish: main
           name: "Permalink (latest)"
           body: "Always the latest working version of the resource pack."
-          overwrite: true
           make_latest: false
           files: CreeperTweaks.zip
         env:
@@ -49,7 +48,6 @@ jobs:
           target_commitish: beta
           name: "Beta Permalink (beta-latest)"
           body: "Always the latest testing version of the resource pack."
-          overwrite: true
           make_latest: false
           prerelease: true
           files: CreeperTweaks-beta.zip
@@ -68,7 +66,7 @@ jobs:
           custom_release_rules: |
             update:major:Update,
             wip:patch:Small Changes,
-            beta:prerelease:Beta Fixes
+            beta:prerelease:Beta Fixes,
             
 
       - name: Rename Zip for Main Version
@@ -100,7 +98,7 @@ jobs:
           custom_release_rules: |
             update:major:Update,
             wip:patch:Small Changes,
-            beta:prerelease:Beta Fixes
+            beta:prerelease:Beta Fixes,
 
       - name: Rename Zip for Beta Version
         if: github.ref == 'refs/heads/beta'
