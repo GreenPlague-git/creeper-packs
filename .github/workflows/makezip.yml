@@ -27,6 +27,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
+          target_commitish: main
           name: "Stable Release (latest)"
           body: "Always the latest working version of the resource pack."
           overwrite: true
@@ -45,6 +46,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: beta-latest
+          target_commitish: beta
           name: "Beta Testing Release (beta-latest)"
           body: "Always the latest testing version of the resource pack."
           overwrite: true
